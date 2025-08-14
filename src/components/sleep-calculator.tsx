@@ -116,7 +116,7 @@ export default function SleepCalculator() {
           onChange={(e) => onChange({...time, minute: parseInt(e.target.value)})}
           className="bg-slate-800 text-white px-3 py-2 rounded-lg border border-slate-600 focus:border-[#89CFF0] focus:outline-none"
         >
-          {[0, 15, 30, 45, 55].map(minute => (
+          {[0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55].map(minute => (
             <option key={minute} value={minute}>{minute.toString().padStart(2, '0')}</option>
           ))}
         </select>
@@ -184,7 +184,7 @@ export default function SleepCalculator() {
             onClick={calculateWakeUpNow}
             className="w-32 h-16 bg-slate-700 hover:bg-slate-600 text-white font-bold text-xl rounded-lg transition-all duration-200 hover:shadow-lg"
           >
-            ZZZ
+            Sleep Now💤
           </Button>
           <ResultDisplay results={wakeUpNowResults} label="Wake up at:" />
         </div>
