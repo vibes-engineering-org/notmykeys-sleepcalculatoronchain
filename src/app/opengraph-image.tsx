@@ -36,6 +36,7 @@ export default async function Image() {
             bottom: 0,
             background: "linear-gradient(135deg, #0d9488 0%, #7c3aed 100%)",
             opacity: 0.15,
+            display: "flex",
           }}
         />
 
@@ -49,6 +50,7 @@ export default async function Image() {
             bottom: 0,
             backgroundImage:
               "radial-gradient(circle at 20% 80%, rgba(13, 148, 136, 0.3) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(124, 58, 237, 0.3) 0%, transparent 50%)",
+            display: "flex",
           }}
         />
 
@@ -98,6 +100,7 @@ export default async function Image() {
                   borderRadius: "50%",
                   background: "#ffffff",
                   position: "relative",
+                  display: "flex",
                 }}
               >
                 <div
@@ -124,6 +127,7 @@ export default async function Image() {
                 height: "12px",
                 background: "#ffffff",
                 clipPath: "polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)",
+                display: "flex",
               }}
             />
             <div
@@ -135,6 +139,7 @@ export default async function Image() {
                 height: "8px",
                 background: "#ffffff",
                 clipPath: "polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)",
+                display: "flex",
               }}
             />
           </div>
@@ -168,6 +173,7 @@ export default async function Image() {
               textAlign: "center",
               marginBottom: "24px",
               fontFamily: "system-ui, -apple-system, sans-serif",
+              display: "flex",
             }}
           >
             Optimize Your Sleep Cycles
@@ -208,6 +214,7 @@ export default async function Image() {
                 fontWeight: "600",
                 color: "#ffffff",
                 fontFamily: "system-ui, -apple-system, sans-serif",
+                display: "flex",
               }}
             >
               90min cycles × 4-6 = Perfect rest
@@ -224,6 +231,7 @@ export default async function Image() {
             right: 0,
             height: "8px",
             background: "linear-gradient(135deg, #0d9488 0%, #7c3aed 100%)",
+            display: "flex",
           }}
         />
       </div>

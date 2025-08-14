@@ -50,7 +50,7 @@ export default function SleepCalculator() {
   const calculateBedtimes = () => {
     const wakeMinutes = timeToMinutes(wakeUpTime);
     const fallAsleepOffset = 14; // 14 minutes to fall asleep
-    const cycleLengths = [6 * 60, 7.5 * 60, 9 * 60]; // 6, 7.5, 9 hours in minutes
+    const cycleLengths = [9 * 60, 7.5 * 60, 6 * 60]; // 9, 7.5, 6 hours in minutes (earlier to latest)
     
     const bedtimes = cycleLengths.map(cycleLength => {
       const bedtime = wakeMinutes - cycleLength - fallAsleepOffset;
@@ -65,7 +65,7 @@ export default function SleepCalculator() {
     const now = new Date();
     const currentMinutes = now.getHours() * 60 + now.getMinutes();
     const fallAsleepOffset = 14;
-    const cycleLengths = [6 * 60, 7.5 * 60, 9 * 60];
+    const cycleLengths = [6 * 60, 7.5 * 60, 9 * 60]; // 6, 7.5, 9 hours (earlier to latest wake times)
     
     const wakeUpTimes = cycleLengths.map(cycleLength => {
       const wakeTime = currentMinutes + fallAsleepOffset + cycleLength;
@@ -79,7 +79,7 @@ export default function SleepCalculator() {
   const calculateFromFallAsleep = () => {
     const fallAsleepMinutes = timeToMinutes(fallAsleepTime);
     const fallAsleepOffset = 14;
-    const cycleLengths = [6 * 60, 7.5 * 60, 9 * 60];
+    const cycleLengths = [6 * 60, 7.5 * 60, 9 * 60]; // 6, 7.5, 9 hours (earlier to latest wake times)
     
     const wakeUpTimes = cycleLengths.map(cycleLength => {
       const wakeTime = fallAsleepMinutes + fallAsleepOffset + cycleLength;
@@ -116,7 +116,7 @@ export default function SleepCalculator() {
           onChange={(e) => onChange({...time, minute: parseInt(e.target.value)})}
           className="bg-slate-800 text-white px-3 py-2 rounded-lg border border-slate-600 focus:border-[#89CFF0] focus:outline-none"
         >
-          {[0, 15, 30, 45].map(minute => (
+          {[0, 15, 30, 45, 55].map(minute => (
             <option key={minute} value={minute}>{minute.toString().padStart(2, '0')}</option>
           ))}
         </select>
